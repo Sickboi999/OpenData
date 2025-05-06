@@ -41,8 +41,6 @@
     .chart-container {
       width: 100%;
       aspect-ratio: 16 / 9;
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
       border-radius: 12px;
       overflow: hidden;
       margin-bottom: 2em;
@@ -67,6 +65,21 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* 動態外框樣式 */
+    .section-box {
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 2em;
+      background-color: #ffffff;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .section-box:hover {
+      border-color: var(--primary-color);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
     @media (max-width: 600px) {
       h1, h2 {
         font-size: 1.5rem;
@@ -81,41 +94,51 @@
 
   <div class="container">
 
-    <h1>鶯歌區高齡人口分佈與扶老比</h1>
-    <p class="description">
-      利用以下兩張圖表我們可以進一步研究新北市各行政區青壯年人口扶養高齡者之壓力程度，以更好地規劃社會福利與公共建設政策。
-    </p>
-
-    <p class="description">
-      第一張圖表顯示著新北市各村里間高齡人口的實際分佈狀況。
-    </p>
-    <div class="chart-container">
-      <iframe 
-        src="https://plotdb.io/v/chart/37450" 
-        allowfullscreen>
-      </iframe>
+    <!-- 第一區塊 -->
+    <div class="section-box">
+      <h1>鶯歌區高齡人口分佈與扶老比</h1>
+      <p class="description">
+        利用以下兩張圖表我們可以進一步研究新北市各行政區青壯年人口扶養高齡者之壓力程度，以更好地規劃社會福利與公共建設政策。
+      </p>
     </div>
 
-    <p class="description">
-      第二張圖表顯示各村里的扶老比，有助於進一步細化區域性的政策調整與資源分配。
-    </p>
-    <div class="chart-container">
-      <iframe 
-        src="https://plotdb.io/v/chart/37462" 
-        allowfullscreen>
-      </iframe>
+    <!-- 第二區塊 -->
+    <div class="section-box">
+      <p class="description">
+        第一張圖表顯示著新北市各村里間高齡人口的實際分佈狀況。
+      </p>
+      <div class="chart-container">
+        <iframe 
+          src="https://plotdb.io/v/chart/37450" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="description">
+        第二張圖表顯示各村里的扶老比，有助於進一步細化區域性的政策調整與資源分配。
+      </p>
+      <div class="chart-container">
+        <iframe 
+          src="https://plotdb.io/v/chart/37462" 
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
-    <h2>共融社會與高齡福祉的實踐倡議</h2>
-    <p class="description">
-      高齡者一生為生活與夢想努力，退休後理應享有悠閒人生，然而情感交流的缺乏常使長輩感到孤單。為此，我們倡議舉辦面向全年齡的一日郊遊活動，以「老少共融、文化體驗、城市共榮」為核心，鼓勵家族參與地方旅遊，並促進養老院與學校間的互動。
-    </p>
-    <p class="description">
-      活動可安排參觀陶瓷工廠、共同製作手工藝品，或體驗手作肉桂捲，讓長輩與孩子共享學習與生活樂趣，進而活化地方產業。透過這類跨世代交流，不僅促進情感連結，也帶動基礎設施升級，如無障礙環境與交通安全改善，打造更友善的人本社區。期望透過共融互動，實現「魚幫水，水幫魚」的共榮願景。
-    </p>
-    <div class="image-container">
-      <img src="your-image-url.jpg" alt="老少共融活動示意圖">
+    <!-- 第三區塊 -->
+    <div class="section-box">
+      <h2>共融社會與高齡福祉的實踐倡議</h2>
+      <p class="description">
+        高齡者一生為生活與夢想努力，退休後理應享有悠閒人生，然而情感交流的缺乏常使長輩感到孤單。為此，我們倡議舉辦面向全年齡的一日郊遊活動，以「老少共融、文化體驗、城市共榮」為核心，鼓勵家族參與地方旅遊，並促進養老院與學校間的互動。
+      </p>
+      <p class="description">
+        活動可安排參觀陶瓷工廠、共同製作手工藝品，或體驗手作肉桂捲，讓長輩與孩子共享學習與生活樂趣，進而活化地方產業。透過這類跨世代交流，不僅促進情感連結，也帶動基礎設施升級，如無障礙環境與交通安全改善，打造更友善的人本社區。期望透過共融互動，實現「魚幫水，水幫魚」的共榮願景。
+      </p>
+      <div class="image-container">
+        <img src="your-image-url.jpg" alt="老少共融活動示意圖">
+      </div>
     </div>
+
   </div>
 
 </body>
